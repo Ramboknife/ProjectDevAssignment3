@@ -66,9 +66,9 @@ function test_input($data) {
   Comment: <textarea name="comment" rows="5" cols="40"></textarea>
   <br><br>
   Gender:
-  <input type="radio" name="gender" value="female">Female
-  <input type="radio" name="gender" value="male">Male
-  <input type="radio" name="gender" value="other">Other
+  <input type="radio" name="gender" value="Female">Female
+  <input type="radio" name="gender" value="Male">Male
+  <input type="radio" name="gender" value="Other">Other
   <span class="error">* <?php echo $genderErr;?></span>
   <br><br>
   <input type="submit" name="submit" value="Submit">  
@@ -76,7 +76,7 @@ function test_input($data) {
 
 <?php
 echo "<h2>Thanks! Here is the information you have added to the newsletter mailing list:</h2>";
-echo $name;
+echo "<h1> Name: <h1>" $name;
 echo "<br>";
 echo $email;
 echo "<br>";
