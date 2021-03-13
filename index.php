@@ -8,7 +8,6 @@
 <body>  
 
 <?php
-// define variables and set to empty values
 $nameErr = $emailErr = $genderErr = $websiteErr = "";
 $name = $email = $gender = $comment = $website = "";
 
@@ -52,8 +51,8 @@ function test_input($data) {
 }
 ?>
 
-<h2>PHP Form Validation Example</h2>
-<p><span class="error">* required field</span></p>
+<h2>Please sign up to my newsletter!</h2>
+<p><span class="error">* these are required fields</span></p>
 <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">  
   Name: <input type="text" name="name">
   <span class="error">* <?php echo $nameErr;?></span>
@@ -76,7 +75,7 @@ function test_input($data) {
 </form>
 
 <?php
-echo "<h2>Your Input:</h2>";
+echo "<h2>Thanks! Here is the information you have added to the newsletter mailing list:</h2>";
 echo $name;
 echo "<br>";
 echo $email;
