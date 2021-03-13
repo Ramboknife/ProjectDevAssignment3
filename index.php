@@ -37,7 +37,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   }
 
   if (empty($_POST["gender"])) {
-    $genderErr = "Gender is required";
+    $gender = "";
   } else {
     $gender = test_input($_POST["gender"]);
   }
@@ -76,7 +76,7 @@ function test_input($data) {
 
 <?php
 echo "<h2>Thanks! Here is the information you have added to the newsletter mailing list:</h2>";
-echo "<h1> Name: <h1>" $name;
+echo $name;
 echo "<br>";
 echo $email;
 echo "<br>";
