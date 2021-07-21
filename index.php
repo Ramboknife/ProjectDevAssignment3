@@ -85,6 +85,23 @@ echo "<br>";
 echo $comment;
 echo "<br>";
 echo $gender;
+
+$name = $_POST['name'];
+$email = $_POST['email'];
+$message = $_POST['message'];
+$from = 'From: yoursite.com'; 
+$to = 'ramboknife1989@gmail.com'; 
+$subject = 'Customer Inquiry';
+$body = "From: $name\n E-Mail: $email\n Message:\n $message";
+
+$headers .= "MIME-Version: 1.0\r\n";
+$headers .= "Content-type: text/html\r\n";
+$headers .= 'From: from@example.com' . "\r\n" .
+'Reply-To: reply@example.com' . "\r\n" .
+'X-Mailer: PHP/' . phpversion();
+
+mail($to, $subject, $message, $headers);  
+  
 ?>
 
 </body>
