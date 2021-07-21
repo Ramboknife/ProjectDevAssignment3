@@ -86,21 +86,14 @@ echo $comment;
 echo "<br>";
 echo $gender;
 
-$name = $_POST['name'];
-$email = $_POST['email'];
-$message = $_POST['message'];
-$from = 'From: yoursite.com'; 
-$to = 'ramboknife1989@gmail.com'; 
-$subject = 'Customer Inquiry';
-$body = "From: $name\n E-Mail: $email\n Message:\n $message";
+// the message
+$msg = "First line of text\nSecond line of text";
 
-$headers .= "MIME-Version: 1.0\r\n";
-$headers .= "Content-type: text/html\r\n";
-$headers .= 'From: from@example.com' . "\r\n" .
-'Reply-To: reply@example.com' . "\r\n" .
-'X-Mailer: PHP/' . phpversion();
+// use wordwrap() if lines are longer than 70 characters
+$msg = wordwrap($msg,70);
 
-mail($to, $subject, $message, $headers);  
+// send email
+mail("ramboknife1989@gmail.com","My subject",$msg);
   
 ?>
 
