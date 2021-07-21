@@ -75,7 +75,7 @@ function test_input($data) {
 </form>
 
 <?php
-echo "<h2>Thanks! Here is the information you have added to the newsletter mailing list:</h2>";
+echo "<h2>Thankz! Here is the information you have added to the newsletter mailing list:</h2>";
 echo $name;
 echo "<br>";
 echo $email;
